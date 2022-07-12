@@ -1,8 +1,21 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import { Web3Provider, ExternalProvider } from "@ethersproject/providers";
+import { Web3ReactProvider } from "@web3-react/core";
+import { MetaMaskProvider } from "../hooks/useMetaMask";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function getLibrary(provider: ExternalProvider) {
+  return new Web3Provider(provider);
 }
 
-export default MyApp
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <MetaMaskProvider>
+        <Component {...pageProps} />
+      </MetaMaskProvider>
+    </Web3ReactProvider>
+  );
+}
+
+export default MyApp;
