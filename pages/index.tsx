@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Header } from "../components/molecules/Header";
+
 import useMetaMask from "../hooks/useMetaMask";
+import { Header } from "../components/molecules/Header/Header";
+import TrendingCollections from "../components/organisms/TrendingCollections/TrendingCollections";
 
 const Home: NextPage = () => {
   const { connect, disconnect, isActive, account } = useMetaMask();
@@ -29,6 +31,7 @@ const Home: NextPage = () => {
       ) : (
         <span>Not connected</span>
       )}
+      <TrendingCollections />
     </div>
   );
 };

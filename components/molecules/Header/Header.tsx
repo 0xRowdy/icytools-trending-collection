@@ -1,6 +1,6 @@
 import React, { RefObject } from "react";
 
-import { Button } from "../atoms/Button/Button";
+import { Button } from "../../atoms/Button/Button";
 
 export type HeaderProps = {
   children?: React.ReactNode;
