@@ -1,6 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Icy Tools Integration
+
+1. Did you finish everything you wanted to? If not, what would you do if you spent another hour or two working on this?
+I would have liked to have more time to propperly display data coming back from icy tools api. Looking back over the assignment it kinda called out a custom hook for useTrendingCollections could have been good. I went with the out of the box apollo getQuery hook to run the query when a user is connected with MetaMask which can handle data caching. I handled eveything on the client side which is fine for this application but doesn't flex some of the powers of Next.js
+
+2. What part of this project do you feel the best about? This can be anything!
+The Web3 integration was handled nicely. Folder structure and orginization are also pretty good.
+
+3. What did you struggle with the most or feel rushed on the most?
+This was a good amount of work to complete in the timebox. I could have hacked it a bit faster if I didn't pay attention to folder structure, using components, etc. I had a little bit of a challenge finding the correct types in the icy tools explorer for the query. I was hoping for a quick cut and paste on those but I ended up just making them.
 
 ## Getting Started
+
+Configure your Icy Tools API Key in the .env file
+
+install dependencies with `npm install` or `yarn install`
 
 First, run the development server:
 
